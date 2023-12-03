@@ -1,6 +1,4 @@
-import { readInput } from "./utils";
-
-const day2 = await readInput("day2.txt");
+import day2 from "../inputs/day2.txt";
 
 const cubes: Record<string, number> = {
   red: 12,

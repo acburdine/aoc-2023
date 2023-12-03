@@ -1,4 +1,4 @@
-import { readInput } from "./utils";
+import day1 from "../inputs/day1.txt";
 
 const nums: Record<string, string> = {
   one: "1",
@@ -11,8 +11,6 @@ const nums: Record<string, string> = {
   eight: "8",
   nine: "9",
 };
-
-const day1 = await readInput("day1.txt");
 
 const lines = day1
   .trim()

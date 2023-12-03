@@ -5,7 +5,9 @@ import select from "@inquirer/select";
 const file = Bun.fileURLToPath(new URL(import.meta.url));
 const dir = dirname(file);
 
-const dayFiles = (await readdir(dir)).filter((f) => /^day[0-9]+\.ts$/.test(f));
+const dayFiles = (await readdir(dir))
+  .filter((f) => /^day[0-9]+\.ts$/.test(f))
+  .sort();
 
 const choice = await select({
   message: "Day to run",
