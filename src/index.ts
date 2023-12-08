@@ -7,7 +7,8 @@ const dir = dirname(file);
 
 const dayFiles = (await readdir(dir))
   .filter((f) => /^day[0-9]+\.ts$/.test(f))
-  .sort();
+  .sort()
+  .reverse();
 
 const choice = await select({
   message: "Day to run",
